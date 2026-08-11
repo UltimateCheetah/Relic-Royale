@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relic Royale</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">RR</div>
+          <div>
+            <p class="eyebrow">Original battle royale</p>
+            <h1>Relic Royale</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Main menu">
+          <button class="nav-button active" data-screen="home">Play</button>
+          <button class="nav-button" data-screen="modes">Modes</button>
+          <button class="nav-button" data-screen="locker">Locker</button>
+          <button class="nav-button" data-screen="relics">Relics</button>
+          <button class="nav-button" data-screen="pass">Relic Pass</button>
+          <button class="nav-button" data-screen="events">Events</button>
+          <button class="nav-button" data-screen="social">Social</button>
+          <button class="nav-button" data-screen="vault">Vault</button>
+          <button class="nav-button" data-screen="settings">Settings</button>
+        </nav>
+      </aside>
+
+      <main class="content-panel">
+        <header class="top-header">
+          <div class="header-left">
+            <span class="season-pill">Season 7 · Verdant Rift</span>
+          </div>
+          <div class="header-right">
+            <div class="profile-chip">Aster</div>
+            <div class="resource-pill">12,430 shards</div>
+            <div class="resource-pill">3,200 dust</div>
+          </div>
+        </header>
+
+        <section id="home" class="screen visible">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <p class="eyebrow">Mystic collapse underway</p>
+              <h2>Claim the relic crown.</h2>
+              <p>
+                Survive the shattered frontier, gather relic fragments, and outlast rival squads in a battle of timing, tactics, and adaptation.
+              </p>
+              <div class="cta-row">
+                <button class="primary" id="playNowBtn">Play Now</button>
+                <button class="secondary" id="viewModesBtn">View Modes</button>
+              </div>
+            </div>
+            <div class="hero-panel">
+              <div class="mini-stat">
+                <span>Season</span>
+                <strong>Verdant Rift</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Current Trial</span>
+                <strong>Skyline Hunt</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Relic Tier</span>
+                <strong>Ascendent</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Relic Roster</h3>
+              <p>Customize modular relic loadouts to match mobility, survivability, or burst damage.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Expedition Board</h3>
+              <p>Track seasonal trials, squad objectives, and route pressure across the fractured map.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Vault Market</h3>
+              <p>Spend shards and relic dust on cosmetics, colors, banners, and upgrade themes.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="modes" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Match setup</p>
+              <h2>Choose your mode</h2>
+            </div>
+          </div>
+          <div class="panel-grid mode-grid">
+            <button class="selection-card selected" data-mode="solo">
+              <span>Solo</span>
+              <small>Pure survival</small>
+            </button>
+            <button class="selection-card" data-mode="duo">
+              <span>Duo</span>
+              <small>Pair tactics</small>
+            </button>
+            <button class="selection-card" data-mode="squad">
+              <span>Squad</span>
+              <small>Field coordination</small>
+            </button>
+            <button class="selection-card" data-mode="trial">
+              <span>Relic Trial</span>
+              <small>High-risk relic rush</small>
+            </button>
+          </div>
+
+          <div class="lobby-panel">
+            <div>
+              <label>Map</label>
+              <select id="mapSelect">
+                <option selected>Veil Harbor</option>
+                <option>Glass Dunes</option>
+                <option>Sunken Citadel</option>
+                <option>Iron Canopy</option>
+              </select>
+            </div>
+            <div>
+              <label>Difficulty</label>
+              <select id="difficultySelect">
+                <option selected>Normal</option>
+                <option>Adaptive</option>
+                <option>Hard</option>
+              </select>
+            </div>
+            <div>
+              <label>Squad</label>
+              <select id="squadSelect">
+                <option selected>North Watch</option>
+                <option>Rift Breakers</option>
+                <option>Moonglass</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section id="locker" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Loadout</p>
+              <h2>Locker / Loadout</h2>
+            </div>
+          </div>
+          <div class="panel-grid locker-grid">
+            <div class="item-card">
+              <span>Primary</span>
+              <strong>Verdant Carbine</strong>
+            </div>
+            <div class="item-card">
+              <span>Secondary</span>
+              <strong>Nightglass Pistol</strong>
+            </div>
+            <div class="item-card">
+              <span>Utility</span>
+              <strong>Pulse Beacon</strong>
+            </div>
+            <div class="item-card">
+              <span>Appearance</span>
+              <strong>Amber Arc</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="relics" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Relic roster</p>
+              <h2>Choose your relic kit</h2>
+            </div>
+          </div>
+          <div class="relic-list" id="relicList">
+            <button class="relic-option selected" data-relic="Shock Pulse">
+              <span>Shock Pulse</span>
+              <small>AoE burst damage</small>
+            </button>
+            <button class="relic-option" data-relic="Shield Bloom">
+              <span>Shield Bloom</span>
+              <small>Defensive burst</small>
+            </button>
+            <button class="relic-option" data-relic="Blink Dash">
+              <span>Blink Dash</span>
+              <small>Mobility escape</small>
+            </button>
+            <button class="relic-option" data-relic="Scan Pulse">
+              <span>Scan Pulse</span>
+              <small>Area reveal</small>
+            </button>
+          </div>
+        </section>
+
+        <section id="pass" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Progression</p>
+              <h2>Relic Pass</h2>
+            </div>
+          </div>
+          <div class="panel-grid pass-grid">
+            <div class="progress-card">
+              <span>Account Level</span>
+              <strong>38</strong>
+            </div>
+            <div class="progress-card">
+              <span>Relic Mastery</span>
+              <strong>72%</strong>
+            </div>
+            <div class="progress-card">
+              <span>Seasonal Milestone</span>
+              <strong>12 / 20</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="events" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Seasonal systems</p>
+              <h2>Event Board</h2>
+            </div>
+          </div>
+          <div class="list-panel">
+            <ul>
+              <li>Skyline Hunt — secure three high-altitude relic beacons.</li>
+              <li>Glass Bloom — collect shards to revive the ancient flower gates.</li>
+              <li>Night Harbor Raid — survive the storm breach in a rotating zone.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="social" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Hall</p>
+              <h2>Social Hub</h2>
+            </div>
+          </div>
+          <div class="panel-grid social-grid">
+            <div class="user-card">
+              <span>Friends</span>
+              <strong>14 online</strong>
+            </div>
+            <div class="user-card">
+              <span>Squad</span>
+              <strong>North Watch</strong>
+            </div>
+            <div class="user-card">
+              <span>Presence</span>
+              <strong>Queue ready</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="vault" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Vault Market</p>
+              <h2>Store and cosmetics</h2>
+            </div>
+          </div>
+          <div class="list-panel">
+            <ul>
+              <li>Sunlit Vow skin — 1200 shards</li>
+              <li>Hollow Warden banner — 500 relic dust</li>
+              <li>Night Drift emote — 700 tokens</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="settings" class="screen">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Account</p>
+              <h2>Settings</h2>
+            </div>
+          </div>
+          <div class="list-panel">
+            <ul>
+              <li>Audio mix — tuned for squad comms</li>
+              <li>Visuals — high contrast focus</li>
+              <li>Network — optimized for quick queue</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="match" class="screen">
+          <div class="match-header">
+            <div>
+              <p class="eyebrow">Live drop</p>
+              <h2 id="matchMapTitle">Veil Harbor</h2>
+            </div>
+            <button class="secondary" id="backToMenuBtn">Return to Hall</button>
+          </div>
+
+          <div class="game-shell">
+            <canvas id="gameCanvas" width="920" height="560"></canvas>
+            <div class="hud-overlay">
+              <div class="top-bar">
+                <div class="hud-pill">
+                  <span>HP</span>
+                  <strong id="healthValue">100</strong>
+                </div>
+                <div class="hud-pill">
+                  <span>Shield</span>
+                  <strong id="shieldValue">65</strong>
+                </div>
+                <div class="hud-pill">
+                  <span>Relic Meter</span>
+                  <strong id="relicValue">72%</strong>
+                </div>
+                <div class="hud-pill">
+                  <span>Storm</span>
+                  <strong id="stormValue">02:30</strong>
+                </div>
+              </div>
+
+              <div class="side-panel">
+                <div class="mini-map">
+                  <div class="mini-map-circle"></div>
+                </div>
+                <div class="status-list">
+                  <div><span>Squad</span><strong>North Watch</strong></div>
+                  <div><span>Relic</span><strong id="activeRelicLabel">Shock Pulse</strong></div>
+                  <div><span>Fragments</span><strong id="fragmentsValue">0</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="summary" class="screen">
+          <div class="summary-card">
+            <p class="eyebrow">Match complete</p>
+            <h2>Vault secured</h2>
+            <div class="summary-grid">
+              <div>
+                <span>Placement</span>
+                <strong id="placementValue">#1</strong>
+              </div>
+              <div>
+                <span>Relic Score</span>
+                <strong id="relicScoreValue">1270</strong>
+              </div>
+              <div>
+                <span>Rewards</span>
+                <strong id="rewardValue">420 shards</strong>
+              </div>
+              <div>
+                <span>Pass Progress</span>
+                <strong id="passValue">+8%</strong>
+              </div>
+            </div>
+            <div class="cta-row">
+              <button class="primary" id="playAgainBtn">Play Again</button>
+              <button class="secondary" id="summaryToHomeBtn">Back to Hall</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
